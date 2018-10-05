@@ -20,6 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Referenciando o authController junto com app para que não seja necessário instanciar o app recebendo express novamente
 // Caso fizessemos assim, estaríamos rodando duas aplicações na mesma plataforma do node
 require('./controllers/authController')(app);
+require('./controllers/projectController')(app);
 
 // Ouvindo a api na porta 3000
 app.listen(3000);
